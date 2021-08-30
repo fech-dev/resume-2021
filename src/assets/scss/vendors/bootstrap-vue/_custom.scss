@@ -16,7 +16,7 @@ $black:    #000 !default;
 
 // $grays: () !default;
 
-$blue:    #007bff !default;
+$blue:     #36728C;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -24,7 +24,7 @@ $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
-$teal:    #20c997 !default;
+$teal:    #36878C;
 $cyan:    #17a2b8 !default;
 
 $colors: () !default;
@@ -139,7 +139,7 @@ $container-max-widths: (
 // $line-height-lg:              1.5 !default;
 // $line-height-sm:              1.5 !default;
 
-// $border-width:                1px !default;
+$border-width:                3px;
 // $border-color:                $gray-300 !default;
 
 // $border-radius:               .25rem !default;
@@ -171,34 +171,34 @@ $container-max-widths: (
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+//$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            'Roboto', $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-// $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
 // $font-size-lg:                $font-size-base * 1.25 !default;
 // $font-size-sm:                $font-size-base * .875 !default;
 
 // $font-weight-lighter:         lighter !default;
-// $font-weight-light:           300 !default;
+$font-weight-light:           300;
 // $font-weight-normal:          400 !default;
 // $font-weight-bold:            700 !default;
 // $font-weight-bolder:          bolder !default;
 
-// $font-weight-base:            $font-weight-normal !default;
+$font-weight-base:            $font-weight-light;
 // $line-height-base:            1.5 !default;
 
-// $h1-font-size:                $font-size-base * 2.5 !default;
-// $h2-font-size:                $font-size-base * 2 !default;
-// $h3-font-size:                $font-size-base * 1.75 !default;
+$h1-font-size:                Max($font-size-base * 2.325, 6vw);
+$h2-font-size:                $font-size-base * 1.875;
+$h3-font-size:                $font-size-base * 1.375;
 // $h4-font-size:                $font-size-base * 1.5 !default;
 // $h5-font-size:                $font-size-base * 1.25 !default;
 // $h6-font-size:                $font-size-base !default;
 
 // $headings-margin-bottom:      $spacer / 2 !default;
 // $headings-font-family:        null !default;
-// $headings-font-weight:        500 !default;
-// $headings-line-height:        1.2 !default;
+$headings-font-weight:        700;
+$headings-line-height:        1;
 // $headings-color:              null !default;
 
 // $display1-size:               6rem !default;
@@ -215,7 +215,7 @@ $font-family-base:            $font-family-sans-serif !default;
 // $lead-font-size:              $font-size-base * 1.25 !default;
 // $lead-font-weight:            300 !default;
 
-// $small-font-size:             80% !default;
+$small-font-size:             70%;
 
 // $text-muted:                  $gray-600 !default;
 
