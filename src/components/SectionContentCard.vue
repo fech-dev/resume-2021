@@ -1,7 +1,7 @@
 <template functional>
-  <div class="section-content-card">
+  <div class="section-content-card" :class="[data.class, data.staticClass]">
     <div class="section-content-card__head">
-      <h3 class="section-content-card__title mb-0">
+      <h3 class="section-content-card__title text-blue-dark mb-0">
         <slot name="title">
           {{ props.title }}
         </slot>

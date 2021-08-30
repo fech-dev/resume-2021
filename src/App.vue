@@ -2,10 +2,16 @@
   <div id="app">
     <app-header :contacts="contacts" />
 
-    <main class="main container-xl">
-      <app-skills :skills="skills" />
-      <app-jobs />
-      <app-education />
+    <main
+      class="main container container-xl flex flex-col md:flex-row md:gap-x-5"
+    >
+      <div class="main__left flex-shrink-0">
+        <app-skills :skills="skills" />
+      </div>
+      <div class="main__right">
+        <app-jobs />
+        <app-education />
+      </div>
     </main>
   </div>
 </template>
@@ -69,20 +75,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/scss/vendors/bootstrap-vue/index";
+@import "~@/assets/scss/vendors/tailwind";
+@import "~@/assets/scss/base/typo";
+@import "~@/assets/scss/base/gradients";
+//@import "~@/assets/scss/vendors/bootstrap-vue/index";
 
 .img-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.bg-gradient-primary {
-  background-image: linear-gradient(
-    175deg,
-    theme-color("primary") 35%,
-    color("teal") 82.5%
-  );
 }
 
 html {
@@ -91,6 +92,9 @@ html {
 
 #app {
   .main {
+    &__left {
+      flex-basis: 30%;
+    }
     /*  display: grid;
     grid-template-columns: 0.3fr 0.7fr;
     gap: 1.5rem 0; */

@@ -1,0 +1,25 @@
+$headings-font-sizes: (
+  "h1": clamp(2.25rem, 5vw, 3rem),
+  "h2": clamp(1.625rem, 4vw, 2.25rem),
+  "h3": clamp(1.325rem, 3vw, 1.75rem),
+  "h4": clamp(1.125rem, 2vw, 1.5rem),
+  "h5": clamp(1rem, 1vw, 1.25rem),
+  "h6": 1rem,
+);
+
+@each $heading-tag, $font-size in $headings-font-sizes{
+  #{$heading-tag}{
+    font-size: $font-size;
+    line-height: 1.125;
+    @apply font-bold;
+  }
+}
+
+section .title{
+  @apply uppercase text-dark;
+
+  &::after{
+    content: '';
+    @apply block h-1 bg-gradient-to-br from-blue-dark to-teal; 
+  }
+}

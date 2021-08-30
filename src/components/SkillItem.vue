@@ -1,15 +1,18 @@
 <template functional>
   <div class="skill-item">
-    <h5 class="skill-item__name mb-1" :class="`text-${props.variant}`">
-      {{ props.name }}
-    </h5>
-    <div
-      class="skill-item__meter border shadow"
-      :class="[`border-${props.variant.replace('gradient-', '')}`]"
+    <h4
+      class="skill-item__name uppercase mb-1"
+      :class="`text-${props.variant}`"
     >
+      {{ props.name }}
+    </h4>
+    <div class="skill-item__meter h-6 border-2 border-blue shadow">
       <div
-        class="skill-item__meter-inner"
-        :class="[`bg-${props.variant}`]"
+        class="
+          skill-item__meter-inner
+          h-full
+          bg-gradient-to-br bg-gradient-primary
+        "
         :style="{ width: `${(100 / 5) * props.vote}%` }"
       ></div>
     </div>
@@ -23,10 +26,6 @@ export default {
       type: String,
       default: "",
     },
-    variant: {
-      type: String,
-      default: "white",
-    },
     vote: {
       type: Number,
       default: 3,
@@ -38,10 +37,7 @@ export default {
 <style lang="scss">
 .skill-item {
   &__meter {
-    height: 1.5rem;
-
     &-inner {
-      height: 100%;
       transition: width 0.3s ease-out;
     }
   }

@@ -1,15 +1,26 @@
 <template functional>
-  <header class="header bg-gradient-primary text-white py-4">
+  <header class="header py-8 text-white bg-gradient-to-b from-blue to-teal">
     <div
       class="
-        container-lg
-        d-flex
-        flex-column flex-sm-row
-        align-items-center
-        justify-content-sm-center
+        container container-lg
+        flex flex-col
+        items-center
+        gap-8
+        sm:flex-row sm:justify-center
       "
     >
-      <div class="header__picture rounded-circle shadow-lg">
+      <div
+        class="
+          header__picture
+          w-40
+          h-40
+          flex-shrink-0
+          border-4 border-white
+          rounded-full
+          overflow-hidden
+          shadow-lg
+        "
+      >
         <img
           src="@/assets/images/pic.jpeg"
           alt="Mameli Federico CV"
@@ -17,13 +28,13 @@
         />
       </div>
 
-      <div class="header__content text-center text-md-left">
-        <h1 class="text-uppercase header__title">
+      <div class="header__content text-center md:text-left">
+        <h1 class="header__title font-bold uppercase">
           Mameli Federico <br />
           <small class="font-weight-bold">Frontend web developer</small>
         </h1>
 
-        <contacts-list :contacts="props.contacts" />
+        <contacts-list :contacts="props.contacts" class="mt-5" />
       </div>
     </div>
   </header>
@@ -43,20 +54,8 @@ export default {
 
 <style lang="scss">
 .header {
-  > [class*="container"] {
-    gap: 2rem;
-  }
-
-  &__picture {
-    $size: 10rem;
-    flex: 0 0 $size;
-    width: $size;
-    height: $size;
-    border: 5px solid $white;
-    overflow: hidden;
-  }
-
   &__title {
+    line-height: 0.8;
     small {
       font-size: 66%;
     }

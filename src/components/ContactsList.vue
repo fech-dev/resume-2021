@@ -15,7 +15,13 @@ export default {
         props: { icon },
       });
 
-      const LinkWrap = h("a", { attrs: { href } }, [Icon, text]);
+      const LinkWrap = h(
+        "a",
+        {
+          attrs: { href },
+        },
+        [Icon, text]
+      );
 
       return href ? [LinkWrap] : [Icon, text];
     };
@@ -24,7 +30,8 @@ export default {
       h(
         "li",
         {
-          staticClass: "contacts-list__item",
+          staticClass:
+            "contacts-list__item hover:underline hover:font-semibold cursor-pointer",
         },
         getLiContent(contact)
       )
@@ -33,8 +40,7 @@ export default {
     return h(
       "ul",
       {
-        staticClass:
-          "contacts-list list-unstyled d-flex flex-column flex-md-row flex-md-wrap",
+        staticClass: "contacts-list flex flex-row flex-wrap",
         class: [data.staticClass, data.class],
       },
       ContactsItems

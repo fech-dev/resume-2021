@@ -1,10 +1,10 @@
 <template>
   <section id="skills" class="py-3">
-    <h2 class="text-uppercase">Skills</h2>
+    <h2 class="title">Skills</h2>
 
     <transition-group
       tag="ul"
-      class="list-unstyled mb-0"
+      class="mb-0 mt-5"
       :css="false"
       appear
       @beforeEnter="beforeEnter"
@@ -16,11 +16,7 @@
         :data-index="i"
         class="mb-2"
       >
-        <skill-item
-          :name="skill.name"
-          :vote="skill.vote"
-          variant="gradient-primary"
-        />
+        <skill-item :name="skill.name" :vote="skill.vote" />
       </li>
     </transition-group>
   </section>
