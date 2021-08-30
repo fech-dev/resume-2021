@@ -1,0 +1,45 @@
+<template functional>
+  <div class="section-content-card">
+    <div class="section-content-card__head">
+      <h3 class="section-content-card__title mb-0">
+        <slot name="title">
+          {{ props.title }}
+        </slot>
+      </h3>
+      <em class="section-content-card__date d-block small">
+        <slot name="dates"> {{ props.dateFrom }} - {{ props.dateTo }}</slot>
+      </em>
+    </div>
+    <div class="section-content-card__body py-2 px-1">
+      <slot>
+        {{ props.body }}
+      </slot>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "SectionContentCard",
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    dateFrom: {
+      type: String,
+      default: "",
+    },
+    dateTo: {
+      type: String,
+      default: "attuale",
+    },
+    body: {
+      type: String,
+      default: "",
+    },
+  },
+};
+</script>
+
+<style></style>
