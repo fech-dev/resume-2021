@@ -1,5 +1,5 @@
 <template functional>
-  <header class="header py-8 text-white bg-gradient-to-b from-blue to-teal">
+  <header class="header py-10 text-white bg-gradient-to-b from-blue to-teal">
     <div
       class="
         container container-lg
@@ -7,34 +7,50 @@
         items-center
         gap-8
         sm:flex-row sm:justify-center
+        lg:h-96
       "
     >
-      <div
-        class="
-          header__picture
-          w-40
-          h-40
-          flex-shrink-0
-          border-4 border-white
-          rounded-full
-          overflow-hidden
-          shadow-lg
-        "
+      <transition
+        enter-active-class="animate__animated animate__fast animate__fadeInLeft"
+        appear
       >
-        <img
-          src="@/assets/images/pic.jpeg"
-          alt="Mameli Federico CV"
-          class="img-cover"
-        />
-      </div>
+        <div
+          class="
+            header__picture
+            w-48
+            h-48
+            flex-shrink-0
+            border-4 border-white
+            rounded-full
+            overflow-hidden
+            shadow-lg
+          "
+        >
+          <img
+            src="@/assets/images/pic.jpeg"
+            alt="Mameli Federico CV"
+            class="img-cover"
+          />
+        </div>
+      </transition>
 
       <div class="header__content text-center md:text-left">
-        <h1 class="header__title font-bold uppercase">
-          Mameli Federico <br />
-          <small class="font-weight-bold">Frontend web developer</small>
-        </h1>
+        <transition
+          appear
+          enter-active-class="animate__animated animate__fast animate__fadeInDown"
+        >
+          <h1 class="header__title font-bold uppercase">
+            Mameli Federico <br />
+            <small class="font-weight-bold">Frontend web developer</small>
+          </h1>
+        </transition>
 
-        <contacts-list :contacts="props.contacts" class="mt-5" />
+        <transition
+          appear
+          enter-active-class="animate__animated animate__fast animate__fadeInRight"
+        >
+          <contacts-list :contacts="props.contacts" class="mt-5" />
+        </transition>
       </div>
     </div>
   </header>
