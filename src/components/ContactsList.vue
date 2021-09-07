@@ -31,7 +31,7 @@ export default {
         "li",
         {
           staticClass:
-            "contacts-list__item hover:underline hover:font-semibold cursor-pointer",
+            "contacts-list__item hover:underline font-medium cursor-pointer",
         },
         getLiContent(contact)
       )
