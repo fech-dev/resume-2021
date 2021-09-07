@@ -1,24 +1,4 @@
-# resume-2021
+# Federico Mameli Resume 
+Project made with vuejs, tailwind, animate-css and bootstrap-icons.
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
