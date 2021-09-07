@@ -5,15 +5,13 @@
     <transition-group
       tag="ul"
       class="mb-0 mt-5"
-      :css="false"
       appear
-      @beforeEnter="beforeEnter"
-      @enter="enter"
+      enter-active-class="animate__animated animate__faster animate__fadeInDown"
     >
       <li
         v-for="(skill, i) in skills"
         :key="skill.name"
-        :data-index="i"
+        :style="{ 'animation-delay': `${100 * i}ms` }"
         class="mb-2"
       >
         <skill-item :name="skill.name" :vote="skill.vote" />
@@ -23,7 +21,6 @@
 </template>
 
 <script>
-import velocity from "velocity-animate";
 import SkillItem from "@/components/SkillItem.vue";
 
 export default {
@@ -35,31 +32,6 @@ export default {
     skills: {
       type: Array,
       required: true,
-    },
-  },
-
-  methods: {
-    beforeEnter(el) {
-      el.style.setProperty("opacity", 0);
-      el.style.setProperty("transform", "translateY(-50px)");
-    },
-    enter(el, done) {
-      const duration = 400;
-
-      setTimeout(() => {
-        velocity(
-          el,
-          {
-            opacity: 1,
-            translateY: "0px",
-          },
-          {
-            duration,
-            easing: "ease-out",
-            complete: done,
-          }
-        );
-      }, (duration - 50) * el.dataset.index);
     },
   },
 };
