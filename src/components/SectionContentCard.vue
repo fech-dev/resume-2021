@@ -1,5 +1,5 @@
 <template functional>
-  <div class="section-content-card" :class="[data.class, data.staticClass]">
+  <div class="section-content-card" v-bind="data">
     <div class="section-content-card__head">
       <h3 class="section-content-card__title text-blue-dark mb-0">
         <slot name="title">
