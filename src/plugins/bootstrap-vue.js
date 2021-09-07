@@ -1,6 +1,4 @@
 import Vue from "vue";
-
-import BootstrapVue from "bootstrap-vue";
 import {
   BIcon,
   BIconEnvelopeFill,
@@ -9,8 +7,6 @@ import {
   BIconPhoneFill,
   BIconGithub,
 } from "bootstrap-vue";
-
-Vue.use(BootstrapVue);
 
 //icons
 Object.entries({
