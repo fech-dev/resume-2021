@@ -3,7 +3,12 @@
     <app-header :contacts="contacts" />
 
     <main
-      class="main container container-xl flex flex-col md:flex-row md:gap-x-5"
+      class="
+        main
+        container container-xl
+        flex flex-col
+        md:flex-row md:gap-x-6 md:my-8
+      "
     >
       <div class="main__left flex-shrink-0">
         <app-skills :skills="skills" />
@@ -74,40 +79,23 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "~@/assets/scss/vendors/tailwind";
-@import "~@/assets/scss/base/typo";
-@import "~@/assets/scss/base/gradients";
+<style lang="sass">
+@import "~@/assets/scss/vendors/tailwind"
+@import "~@/assets/scss/base/typo"
+@import "~@/assets/scss/base/gradients"
 //@import "~@/assets/scss/vendors/bootstrap-vue/index";
+@import "animate.css"
 
-.img-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.img-cover
+  width: 100
+  height: 100
+  object-fit: cover
 
-html {
-  scroll-behavior: smooth;
-}
+html
+  scroll-behavior: smooth
 
-#app {
-  .main {
-    &__left {
-      flex-basis: 30%;
-    }
-    /*  display: grid;
-    grid-template-columns: 0.3fr 0.7fr;
-    gap: 1.5rem 0; */
-
-    #skills {
-      /*  grid-row: 1 / -1;
-      grid-column: 1 / span 1; */
-    }
-
-    #jobs,
-    #education {
-      /* grid-column: 2 / span 1; */
-    }
-  }
-}
+#app
+  .main
+    &__left
+      flex-basis: 30%
 </style>
