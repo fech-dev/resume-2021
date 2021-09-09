@@ -28,10 +28,10 @@ export default {
   data() {
     return {
       educations: [
-        {
+        /* {
           title: "Corso Typescript",
           dateFrom: this.format(new Date("2021-01-01"), "yyyy"),
-        },
+        }, */
         {
           title: "Corso Algoritmi e Strutture Dati",
           dateFrom: this.format(new Date("2021-01-01"), "yyyy"),
