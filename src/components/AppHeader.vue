@@ -1,5 +1,5 @@
 <template functional>
-  <header class="header py-10 text-white bg-gradient-to-b from-blue to-teal">
+  <header class="header py-12 text-white bg-gradient-to-b from-blue to-teal">
     <div
       class="
         container container-lg
@@ -7,7 +7,6 @@
         items-center
         gap-8
         sm:flex-row sm:justify-center
-        lg:h-96
       "
     >
       <transition
