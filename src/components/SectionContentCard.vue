@@ -46,11 +46,12 @@ export default {
 
 <style lang="scss">
 .section-content-card {
-  &__body {
-    ul {
-      list-style: disc;
-      @apply pl-4;
-    }
+  a {
+    @apply text-blue hover:text-blue-dark font-medium cursor-pointer;
+  }
+  ul {
+    list-style: disc;
+    @apply pl-4;
   }
 }
 </style>
