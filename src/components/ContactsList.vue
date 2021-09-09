@@ -40,7 +40,8 @@ export default {
     return h(
       "ul",
       {
-        staticClass: "contacts-list flex flex-row flex-wrap",
+        staticClass:
+          "contacts-list flex flex-wrap justify-center md:justify-start",
         class: [data.staticClass, data.class],
       },
       ContactsItems

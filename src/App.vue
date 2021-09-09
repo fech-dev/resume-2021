@@ -11,7 +11,7 @@
       "
     >
       <div class="main__left flex-shrink-0">
-        <app-skills :skills="skills" />
+        <app-skills :skills="skills" class="lg:sticky" />
       </div>
       <div class="main__right">
         <app-jobs />

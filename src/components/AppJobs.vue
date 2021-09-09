@@ -8,43 +8,11 @@
         enter-active-class="animate__animated animate__fadeIn"
       >
         <section-content-card
-          key="job-2"
-          :style="{ 'animation-delay': '0s' }"
-          title="Collaboratore progetto vue-cli-plugin-bootstrap-vue"
-          :date-from="format(new Date('2021-03-01'), 'MMM yyyy')"
+          v-for="(job, i) in jobs"
+          :key="job.title"
+          :style="{ 'animation-delay': 150 * i + 'ms' }"
+          v-bind="job"
         >
-          Implementazione di nuove features e bugfix.<br />
-          Link github:
-          <a class="text-blue hover:text-blue-dark" href=""
-            >vue-cli-plugin-bootstrap-vue</a
-          >
-        </section-content-card>
-
-        <section-content-card
-          key="job-1"
-          :style="{ 'animation-delay': '.25s' }"
-          title="Front End Web Developer - Smart contact"
-          :date-from="format(new Date('2018-06-01'), 'MMM yyyy')"
-          date-to="attuale"
-        >
-          Frontend developer nella sezione digital.
-          <ul class="list-disc pl-4">
-            <li>
-              Principale sviluppo e mantenimento di landing page per varie
-              aziende operanti nel campo dell'energia, telefonia e internet
-              finalizzate alla lead generation.
-            </li>
-            <li>
-              Sviluppo e manuntenzione di script/packages per il funzionamento
-              del core e features delle landing, rendendo la creazione modulare,
-              semplice e veloce.
-            </li>
-            <li>Organizzazione del team e formazione tirocinanti.</li>
-            <li>
-              Implementazione motore di comparazione all'interno del sito
-              prezzogiusto.com.
-            </li>
-          </ul>
         </section-content-card>
       </transition-group>
     </div>
@@ -53,14 +21,41 @@
 
 <script>
 import formatDateMixin from "@/mixins/dateFormat";
+import marked from "marked";
 
 export default {
   name: "AppJobs",
   mixins: [formatDateMixin],
+  data() {
+    return {
+      jobs: [
+        {
+          title: "Collaboratore progetto vue-cli-plugin-bootstrap-vue",
+          dateFrom: this.format(new Date("2021-05-01"), "MMM yyyy"),
+          body: this.$sanitizeHTML(
+            marked(
+              `Implementazione di nuove features e bugfix.\n\nLink github: [https://github.com/GregYankovoy/vue-cli-plugin-bootstrap-vue](https://github.com/GregYankovoy/vue-cli-plugin-bootstrap-vue)`
+            )
+          ),
+        },
+
+        {
+          title: "Front End Web Developer - Smart Contact",
+          dateFrom: this.format(new Date("2018-06-01"), "MMM yyyy"),
+          body: this.$sanitizeHTML(
+            marked(
+              `Frontend developer nella sezione digital.\n - Principale sviluppo e mantenimento di landing page per varie aziende operanti nel campo dell'energia, telefonia e internet finalizzate alla lead generation.\n - Sviluppo e manuntenzione di script/packages per il funzionamento del core e features delle landing, rendendo la creazione modulare, semplice e veloce.\n - Organizzazione del team e formazione tirocinanti\n - Implementazione motore di comparazione all'interno del sito prezzogiusto.com.`
+            )
+          ),
+        },
+      ],
+    };
+  },
 };
 </script>
 
-<style lang="sass">
-.section-content-card + .section-content-card
-  @apply mt-5
+<style lang="scss">
+.section-content-card + .section-content-card {
+  @apply mt-5;
+}
 </style>

@@ -10,10 +10,12 @@
         <slot name="dates"> {{ props.dateFrom }} - {{ props.dateTo }}</slot>
       </em>
     </div>
-    <div class="section-content-card__body py-2 px-1">
-      <slot>
-        {{ props.body }}
-      </slot>
+    <div
+      class="section-content-card__body py-2 px-1"
+      v-html="props.body"
+      v-if="props.body"
+    >
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -42,4 +44,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.section-content-card {
+  &__body {
+    ul {
+      list-style: disc;
+      @apply pl-4;
+    }
+  }
+}
+</style>

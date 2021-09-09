@@ -23,3 +23,11 @@ section .title{
     @apply block h-1 bg-gradient-to-br from-blue-dark to-teal; 
   }
 }
+
+body{
+  @apply font-light;
+}
+
+a{
+  @apply text-blue hover:text-blue-dark font-medium cursor-pointer;
+}
