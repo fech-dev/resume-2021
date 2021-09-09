@@ -3,8 +3,26 @@
     <h2 class="title">Esperienza Lavorativa</h2>
 
     <div class="px-4 mt-4">
-      <transition appear enter-active-class="animate__animated animate__fadeIn">
+      <transition-group
+        appear
+        enter-active-class="animate__animated animate__fadeIn"
+      >
         <section-content-card
+          key="job-2"
+          :style="{ 'animation-delay': '0s' }"
+          title="Collaboratore progetto vue-cli-plugin-bootstrap-vue"
+          :date-from="format(new Date('2021-03-01'), 'MMM yyyy')"
+        >
+          Implementazione di nuove features e bugfix.<br />
+          Link github:
+          <a class="text-blue hover:text-blue-dark" href=""
+            >vue-cli-plugin-bootstrap-vue</a
+          >
+        </section-content-card>
+
+        <section-content-card
+          key="job-1"
+          :style="{ 'animation-delay': '.25s' }"
           title="Front End Web Developer - Smart contact"
           :date-from="format(new Date('2018-06-01'), 'MMM yyyy')"
           date-to="attuale"
@@ -28,7 +46,7 @@
             </li>
           </ul>
         </section-content-card>
-      </transition>
+      </transition-group>
     </div>
   </section>
 </template>
@@ -42,4 +60,7 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="sass">
+.section-content-card + .section-content-card
+  @apply mt-5
+</style>
