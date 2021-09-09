@@ -70,6 +70,7 @@ export default {
         { name: "Javascript", vote: 4.5 },
         { name: "Vue.js", vote: 4.5 },
         { name: "Nuxt.js", vote: 4 },
+        { name: "TypeScript", vote: 2.5 },
         { name: "Node.js", vote: 3 },
         { name: "MongoDB", vote: 3 },
         { name: "Webpack", vote: 4 },
@@ -83,7 +84,6 @@ export default {
 @import "~@/assets/scss/vendors/tailwind"
 @import "~@/assets/scss/base/typo"
 @import "~@/assets/scss/base/gradients"
-//@import "~@/assets/scss/vendors/bootstrap-vue/index";
 @import "animate.css"
 
 .img-cover
