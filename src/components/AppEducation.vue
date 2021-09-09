@@ -30,18 +30,18 @@ export default {
     return {
       educations: [
         {
-          title: "Corsi Attuali",
+          title: "Corsi attuali",
           dateFrom: this.format(new Date("2021-01-01"), "yyyy"),
           body: marked(
-            "Attualmente sto seguendo un corso di [Strutture dati e Algoritmi](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass) e un corso su [TypeScript](https://www.udemy.com/course/understanding-typescript/)"
+            "- **Strutture dati e Algoritmi**: (https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass)\n- **TypeScript**: (https://www.udemy.com/course/understanding-typescript/)"
           ),
         },
         {
-          title: "Corsi Seguiti",
+          title: "Corsi seguiti post diploma",
           dateFrom: this.format(new Date("2017-01-01"), "yyyy"),
           dateTo: this.format(new Date("2020-12-01"), "yyyy"),
           body: marked(
-            "Dopo il diploma ho seguito vari corsi tra cui: \n- *CSS*: (https://www.udemy.com/course/advanced-css-and-sass/) \n- *JS*: (https://www.udemy.com/course/the-complete-javascript-course)\n- *Vue*: (https://www.udemy.com/course/vuejs-2-the-complete-guide/)\n - *Node.js*: (https://www.udemy.com/course/nodejs-express-mongodb-bootcamp)"
+            "- **CSS**: (https://www.udemy.com/course/advanced-css-and-sass/) \n- **JS**: (https://www.udemy.com/course/the-complete-javascript-course)\n- **Vue**: (https://www.udemy.com/course/vuejs-2-the-complete-guide/)\n - **Node.js**: (https://www.udemy.com/course/nodejs-express-mongodb-bootcamp)"
           ),
         },
         {
