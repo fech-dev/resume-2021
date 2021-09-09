@@ -19,6 +19,7 @@
             header__picture
             w-48
             h-48
+            lg:w-56 lg:h-56
             flex-shrink-0
             border-4 border-white
             rounded-full
@@ -27,7 +28,7 @@
           "
         >
           <img
-            src="@/assets/images/pic.jpeg"
+            src="@/assets/images/pic.jpg"
             alt="Mameli Federico CV"
             class="img-cover"
           />
